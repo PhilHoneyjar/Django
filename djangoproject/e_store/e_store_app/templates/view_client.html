@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Просмотр клиента</title>
+</head>
+<body>
+    <h1>Информация о клиенте</h1>
+    <p><strong>Имя:</strong> {{ client.name }}</p>
+    <p><strong>Email:</strong> {{ client.email }}</p>
+    <p><strong>Номер телефона:</strong> {{ client.phone_number }}</p>
+    <p><strong>Адрес:</strong> {{ client.address }}</p>
+    <p><a href="{% url 'index' %}">Вернуться на главную страницу</a></p>
+</body>
+</html>
