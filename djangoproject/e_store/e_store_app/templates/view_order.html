@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Просмотр заказа</title>
+</head>
+<body>
+    <h1>Информация о заказе</h1>
+    <p><strong>ID заказа:</strong> {{ order.id }}</p>
+    <p><strong>Клиент:</strong> {{ order.client }}</p>
+    <p><strong>Товары:</strong></p>
+    <ul>
+        {% for product in order.products.all %}
+            <li>{{ product.name }}</li>
+        {% endfor %}
+    </ul>
+    <p><strong>Общая сумма:</strong> {{ order.total_amount }}</p>
+    <p><strong>Дата оформления заказа:</strong> {{ order.order_date }}</p>
+    <p><a href="{% url 'index' %}">Вернуться на главную страницу</a></p>
+</body>
+</html>

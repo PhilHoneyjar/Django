@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить товар</title>
+</head>
+<body>
+    <h1>Добавить товар</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="name">Название товара:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="description">Описание товара:</label><br>
+        <textarea id="description" name="description"></textarea><br>
+        <label for="price">Цена товара:</label><br>
+        <input type="number" id="price" name="price"><br>
+        <label for="quantity">Количество товара:</label><br>
+        <input type="number" id="quantity" name="quantity"><br>
+        <label for="date_added">Дата добавления товара:</label><br>
+        <input type="date" id="date_added" name="date_added"><br>
+        <input type="submit" value="Добавить товар">
+    </form>
+</body>
+</html>
