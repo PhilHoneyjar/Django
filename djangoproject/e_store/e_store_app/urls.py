@@ -1,5 +1,4 @@
 from django.urls import path
-<<<<<<< HEAD
 from .views import index, add_client, view_client, add_order, add_product, view_product, view_order, view_client_orders, view_client_products
 
 urlpatterns = [
@@ -12,12 +11,4 @@ urlpatterns = [
     path('view-product/', view_product, name='view_product'),
     path('view-client-orders/', view_client_orders, name='view_client_orders'),
     path('view-client-products/', view_client_products, name='view_client_products'),
-=======
-from .views import index, create_client, view_client
-
-urlpatterns = [
-    path('', index, name='index'),
-    path('create-client/', create_client, name='create_client'),
-    path('view-client/<int:client_id>/', view_client, name='view_client'),
->>>>>>> main
 ]
