@@ -34,3 +34,4 @@ class Order(models.Model):
     def calculate_total_amount(self):
         total = sum(product.price for product in self.products.all())
         self.total_amount = total
+        self.save()
