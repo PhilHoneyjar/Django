@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Просмотр товара</title>
+</head>
+<body>
+    <h1>Информация о товаре</h1>
+    <p><strong>Название:</strong> {{ product.name }}</p>
+    <p><strong>Описание:</strong> {{ product.description }}</p>
+    <p><strong>Цена:</strong> {{ product.price }}</p>
+    <p><strong>Количество:</strong> {{ product.quantity }}</p>
+    <p><strong>Дата добавления:</strong> {{ product.date_added }}</p>
+    <p><a href="{% url 'index' %}">Вернуться на главную страницу</a></p>
+</body>
+</html>

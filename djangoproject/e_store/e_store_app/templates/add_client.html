@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить клиента</title>
+</head>
+<body>
+    <h1>Добавить клиента</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="name">Имя:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="phone_number">Номер телефона:</label><br>
+        <input type="text" id="phone_number" name="phone_number"><br>
+        <label for="address">Адрес:</label><br>
+        <textarea id="address" name="address"></textarea><br>
+        <input type="submit" value="Добавить клиента">
+    </form>
+</body>
+</html>

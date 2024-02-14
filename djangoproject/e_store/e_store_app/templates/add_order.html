@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создать заказ</title>
+</head>
+<body>
+    <h1>Создать заказ</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="client">Клиент:</label><br>
+        <select id="client" name="client">
+            {% for client in clients %}
+                <option value="{{ client.id }}">{{ client.name }}</option>
+            {% endfor %}
+        </select><br>
+        <label for="products">Товары:</label><br>
+        <select id="products" name="products" multiple>
+            {% for product in products %}
+                <option value="{{ product.id }}">{{ product.name }}</option>
+            {% endfor %}
+        </select><br>
+        <label for="total_amount">Общая сумма заказа:</label><br>
+        <input type="number" id="total_amount" name="total_amount"><br>
+        <input type="submit" value="Создать заказ">
+    </form>
+</body>
+</html>
