@@ -23,6 +23,9 @@ class Product(models.Model):
     def __str__(self):
         return f'Product {self.name}, price: {self.price}, quantity: {self.quantity}'
 
+    def __str__(self):
+        return f'Product {self.name}, price: {self.price}, quantity: {self.quantity}'
+
 
 class Order(models.Model):
     client = models.ForeignKey(Client, on_delete=models.CASCADE, related_name='orders')
