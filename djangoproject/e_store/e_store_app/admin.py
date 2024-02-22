@@ -3,8 +3,8 @@ from .models import Client, Order, Product
 
 
 class ClientAdmin(admin.ModelAdmin):
-    list_display = ('name', 'email', 'phone', 'registration_date')
-    search_fields = ('name', 'email', 'phone')
+    list_display = ('name', 'email', 'phone_number', 'registration_date')
+    search_fields = ('name', 'email', 'phone_number')
 
 
 admin.site.register(Client, ClientAdmin)
