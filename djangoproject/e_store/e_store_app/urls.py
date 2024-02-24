@@ -1,5 +1,13 @@
 from django.urls import path
-from .views import index, add_client, view_client, add_order, add_product, view_product, view_order, view_client_orders, view_client_products
+from .views import (index,
+                    add_client,
+                    view_client,
+                    add_order,
+                    add_product,
+                    view_product,
+                    view_order,
+                    view_client_orders,
+                    view_client_products)
 
 urlpatterns = [
     path('', index, name='index'),

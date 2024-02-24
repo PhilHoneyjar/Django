@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from djangoproject.e_store.e_store_app.models import Order
+from e_store_app.models import Order
 
 
 class Command(BaseCommand):
